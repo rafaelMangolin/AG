@@ -33,9 +33,9 @@ public class AlgoritimoEmGrafos {
         
         
         Grafo grafo = new Grafo(listV ,listA);
-        
-        ArvoreBusca arv = GrafoUtils.buscaEmLargura(grafo, "0");
-        arv.imprimirCaminho("3");
+//        grafo.imprimirLista();
+        ArvoreLargura arv = GrafoUtils.buscaEmLargura(grafo, "0");
+        arv.imprimirCaminho("2");
     }
     
 }

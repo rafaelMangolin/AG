@@ -9,17 +9,22 @@ package algoritimo.em.grafos;
  *
  * @author rafael
  */
-public class VerticeLargura {
+public class Vertice {
     private String nome;
     private int estado; //1-branco , 2-cinza, 3-preto
     private String predescessor;
     private int distancia;
+    private int tempoEntrada;
+    private int tempoSaida;
+    
 
-    public VerticeLargura(String nome) {
+    public Vertice(String nome) {
         this.nome = nome;
         this.estado = 1; //1-branco , 2-cinza, 3-preto
         this.predescessor = null;
-        this.distancia = Integer.MAX_VALUE;
+        this.distancia = Integer.MAX_VALUE;//utilizado só no algoritmo de busca em largura
+        this.tempoEntrada = Integer.MIN_VALUE;//utilizado só no algoritmo de busca em profundidade
+        this.tempoSaida = Integer.MIN_VALUE;//utilizado só no algoritmo de busca em profundidade
     }
 
     public String getNome() {

@@ -12,10 +12,10 @@ import java.util.List;
  *
  * @author rafael
  */
-public class ArvoreBusca {
-    private List<VerticeLargura> arvore = new ArrayList<>();
+public class ArvoreLargura {
+    private List<Vertice> arvore = new ArrayList<>();
 
-    public boolean addVertice(VerticeLargura vertice){
+    public boolean addVertice(Vertice vertice){
         return arvore.add(vertice);
     }
     
@@ -23,8 +23,8 @@ public class ArvoreBusca {
         return arvore.size();
     }
     
-    public VerticeLargura getVertice(String nome){
-        for (VerticeLargura vertice : arvore) {
+    public Vertice getVertice(String nome){
+        for (Vertice vertice : arvore) {
             if(vertice.getNome().equalsIgnoreCase(nome)){
                 return vertice;
             }
@@ -33,12 +33,10 @@ public class ArvoreBusca {
     }
     
     public void imprimirCaminho(String nome){
-         VerticeLargura vert = getVertice(nome);
-         
-         while(vert.getPredescessor() == null){
+         Vertice vert = getVertice(nome);
+         while(vert != null){
              System.out.print(vert.getNome()+"   ");
              vert = getVertice(vert.getPredescessor());
-             System.out.println(vert.getNome());
          }
          
     }
