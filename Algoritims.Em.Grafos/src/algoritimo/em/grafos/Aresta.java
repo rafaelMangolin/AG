@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algoritims.em.grafos;
+package algoritimo.em.grafos;
 
 /**
  *
  * @author rafael
  */
-public class Arresta {
+public class Aresta {
     private String x;
     private String y;
 
-    public Arresta(String x, String y) {
+    public Aresta(String x, String y) {
         this.x = x;
         this.y = y;
     }
