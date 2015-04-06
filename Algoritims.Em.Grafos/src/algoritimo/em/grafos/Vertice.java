@@ -58,6 +58,20 @@ public class Vertice {
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
-    
-    
+
+    public int getTempoEntrada() {
+        return tempoEntrada;
+    }
+
+    public void setTempoEntrada(int tempoEntrada) {
+        this.tempoEntrada = tempoEntrada;
+    }
+
+    public int getTempoSaida() {
+        return tempoSaida;
+    }
+
+    public void setTempoSaida(int tempoSaida) {
+        this.tempoSaida = tempoSaida;
+    }
 }

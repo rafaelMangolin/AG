@@ -13,36 +13,52 @@ public class ArvoreProfundidade {
     List<Aresta> avanco = new ArrayList<>();
     List<Aresta> cruzamento = new ArrayList<>();
 
+    
+    public boolean addVertice(Vertice vertice){
+        
+        if(getVertice(vertice.getNome()) == null){
+            return list.add(vertice);
+        }
+        return false;
+    }
+    
+    public boolean addArestaRetorno(Aresta arest){
+        return retorno.add(arest);
+    }
+    
+    public boolean addArestaAvanco(Aresta arest){
+        return avanco.add(arest);
+    }
+    
+    public boolean addArestaCruzamento(Aresta arest){
+        return cruzamento.add(arest);
+    }
+    
+    public Vertice getVertice(String nome){
+        for (Vertice vertice : list) {
+            if(vertice.getNome().equalsIgnoreCase(nome)){
+                return vertice;
+            }
+        }
+        return null;
+    }
+    
+    public Vertice getVertice(int index){
+        return list.get(index);
+    }
+    
+    public void imprimirCaminho(String nome){
+         Vertice vert = getVertice(nome);
+         while(vert != null){
+             System.out.print(vert.getNome()+"   ");
+             vert = getVertice(vert.getPredescessor());
+         }
+         
+    }
+
     public List<Vertice> getList() {
         return list;
     }
-
-    public void setList(List<Vertice> list) {
-        this.list = list;
-    }
-
-    public List<Aresta> getRetorno() {
-        return retorno;
-    }
-
-    public void setRetorno(Aresta a) {
-        this.retorno.add(a);
-    }
-
-    public List<Aresta> getAvanco() {
-        return avanco;
-    }
-
-    public void setAvanco(Aresta a) {
-        this.avanco.add(a);
-    }
-
-    public List<Aresta> getCruzamento() {
-        return cruzamento;
-    }
-
-    public void setCruzamento(Aresta a) {
-        this.cruzamento.add(a);
-    }
+    
     
 }

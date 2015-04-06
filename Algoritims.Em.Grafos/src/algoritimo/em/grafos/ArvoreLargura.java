@@ -40,4 +40,10 @@ public class ArvoreLargura {
          }
          
     }
+
+    public List<Vertice> getArvore() {
+        return arvore;
+    }
+    
+    
 }
